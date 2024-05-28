@@ -1,0 +1,86 @@
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 24px;
+  width: 100%;
+  max-width: 768px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #777;
+}
+
+.popup-content h2 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content label {
+  margin-top: 20px;
+}
+
+.popup-content input,
+.popup-content textarea {
+  margin-top: 5px;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.popup-content button {
+  width: 100px;
+  margin-top: 24px;
+  padding: 10px;
+  color: #fff;
+  background-color: #d00000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+  .popup-content form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .form-group {
+    flex: 1;
+  }
+
+  .message {
+    flex-basis: 100%;
+  }
+}
